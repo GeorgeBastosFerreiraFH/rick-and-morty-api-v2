@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer utilities {
+  @keyframes hover {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes portal-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0);
+    }
+  }
+
+  .animate-hover {
+    animation: hover 3s ease-in-out infinite;
+  }
+
+  .animate-portal-spin {
+    animation: portal-spin 10s linear infinite;
+  }
+
+  .animate-disappear {
+    animation: disappear 2s ease-in-out infinite;
+  }
+}
+
